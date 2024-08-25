@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptography</title>
+    <style>
+        body {
+            font-family: 'arial', Times, serif;
+            background-color: #fefcfc;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #121212;
+            text-align: center;
+            color: #efeeee;
+            font-size: 30px;
+            padding: 30px;
+            width: 95%;
+            font-weight: bold;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(131, 214, 247);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-height: 30vh;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="file"], input[type="text"], input[type="submit"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1.5px solid #959393;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #5d5c5c;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5d5c5c;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 5px; 
+        }
+        h3 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        h4 {
+            text-align: center;
+            color: #333;
+            font-size: 2px;
+            margin-bottom: 10px;
+        }
+        h2, h3, h4 {
+    margin-bottom: 10px; /* Adjust the value to reduce or increase the gap */
+}
+ </style>
+</head>
+<body>
+    <header>CRYPTOGRAPHY</header>
+        <h2>File Encryption</h2>
+        <h4>lock it!</h4>
+        <!-- File Encryption Form -->
+        <form action="2.php" method="post" enctype="multipart/form-data">
+            <label for="file">Encrypt a file:</label>
+            <input type="file" name="file" id="file">
+            <label for="encryption_key">Encryption Key:</label>
+            <input type="text" name="encryption_key" id="encryption_key">
+            <input type="submit" value="Encrypt and Download">
+        </form>
+        <h3>File Decryption</h3>
+        <h4>Unlock it!</h4>
+        <!-- File Decryption Form -->
+        <form action="2d.php" method="post" enctype="multipart/form-data">
+            <label for="encrypted_file">Decrypt an encrypted file:</label>
+            <input type="file" name="encrypted_file" id="encrypted_file">
+            <label for="decryption_key">Decryption Key:</label>
+            <input type="text" name="decryption_key" id="decryption_key">
+            <input type="submit" value="Decrypt and Download">
+        </form>
+</body>
+</html>
